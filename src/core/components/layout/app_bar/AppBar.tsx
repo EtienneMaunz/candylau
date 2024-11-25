@@ -138,7 +138,7 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
       <Divider />
       <List>
         <ListItem>
-          <Logo src="/src/assets/candylau.svg" width="100%" />
+          <Logo src="/assets/candylau.svg" width="100%" />
         </ListItem>
         <Divider sx={{ marginBottom: "1rem" }} />
         {pages.map((page) => (
@@ -198,7 +198,7 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
             >
               <MenuIcon />
             </IconButton>
-            <Logo src="/src/assets/candylau.svg" height="100%" />
+            <Logo src="/assets/candylau.svg" height="100%" />
           </Box>
           <Box
             sx={{

@@ -19,7 +19,7 @@ const Home: FC = () => {
     <>
       <WallContainer
         sx={{ height: { xs: "300px", sm: "600px" } }}
-        $backgroundImage="/src/assets/fruits.jpg"
+        $backgroundImage="/assets/fruits.jpg"
       >
         <TypographiesContainer>
           <Typography color="white" variant="h3" gutterBottom>

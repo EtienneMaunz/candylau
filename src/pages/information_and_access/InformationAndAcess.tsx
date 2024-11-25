@@ -11,7 +11,7 @@ import { AccessTime } from "@mui/icons-material";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import { LatLngExpression } from "leaflet";
+import { icon, LatLngExpression } from "leaflet";
 
 const candylauPos: LatLngExpression = [45.7472682, 4.7256556];
 
@@ -45,6 +45,12 @@ const openingHours: DayOpeningHours[] = [
     openingHours: "10h-15h",
   },
 ];
+
+const markerIcon = icon({
+  iconUrl: "/assets/location-pin.png",
+  iconSize: [48, 48],
+  iconAnchor: [24, 40],
+});
 
 export const InformationAndAccess: FC = () => (
   <StyledInformationAndAccess>
@@ -117,7 +123,7 @@ export const InformationAndAccess: FC = () => (
           zoom={13}
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <Marker position={candylauPos} />
+          <Marker icon={markerIcon} position={candylauPos} />
         </MapContainer>
       </Box>
     </MainContainer>

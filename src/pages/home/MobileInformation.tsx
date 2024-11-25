@@ -25,7 +25,7 @@ const MobileInformation: FC = () => {
         </Grid>
         <Grid size={12}>
           <FixedHeightImageContainer
-            $backgroundImage="src/assets/gallery/gateaux_kinder.jpg"
+            $backgroundImage="/assets/gallery/gateaux_kinder.jpg"
             sx={{ height: "300px" }}
           />
         </Grid>
@@ -46,7 +46,7 @@ const MobileInformation: FC = () => {
         </Grid>
         <Grid size={12}>
           <FixedHeightImageContainer
-            $backgroundImage="src/assets/gallery/tarte_framboises.jpg"
+            $backgroundImage="/assets/gallery/tarte_framboises.jpg"
             sx={{ height: "300px" }}
           />
         </Grid>
@@ -80,7 +80,7 @@ const MobileInformation: FC = () => {
         <Grid size={12}>
           <FixedHeightImageContainer
             sx={{ height: "300px" }}
-            $backgroundImage="src/assets/gallery/patisseries.jpg"
+            $backgroundImage="/assets/gallery/patisseries.jpg"
           />
         </Grid>
       </Grid>
@@ -112,7 +112,7 @@ const MobileInformation: FC = () => {
         <Grid size={12}>
           <FixedHeightImageContainer
             sx={{ height: "300px" }}
-            $backgroundImage="src/assets/gallery/brunchs.jpg"
+            $backgroundImage="/assets/gallery/brunchs.jpg"
           />
         </Grid>
       </Grid>

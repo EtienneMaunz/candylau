@@ -25,7 +25,7 @@ const CommonInformation: FC = () => {
         </Grid>
         <Grid size={6}>
           <FixedHeightImageContainer
-            $backgroundImage="src/assets/gallery/gateaux_kinder.jpg"
+            $backgroundImage="/assets/gallery/gateaux_kinder.jpg"
             sx={{ height: "400px" }}
           />
         </Grid>
@@ -33,7 +33,7 @@ const CommonInformation: FC = () => {
       <Grid container spacing={0} sx={{ width: "100%" }}>
         <Grid size={6}>
           <FixedHeightImageContainer
-            $backgroundImage="src/assets/gallery/tarte_framboises.jpg"
+            $backgroundImage="/assets/gallery/tarte_framboises.jpg"
             sx={{ height: "400px" }}
           />
         </Grid>
@@ -80,7 +80,7 @@ const CommonInformation: FC = () => {
         <Grid size={6}>
           <FixedHeightImageContainer
             sx={{ height: "400px" }}
-            $backgroundImage="src/assets/gallery/patisseries.jpg"
+            $backgroundImage="/assets/gallery/patisseries.jpg"
           />
         </Grid>
       </Grid>
@@ -88,7 +88,7 @@ const CommonInformation: FC = () => {
         <Grid size={6}>
           <FixedHeightImageContainer
             sx={{ height: "400px" }}
-            $backgroundImage="src/assets/gallery/brunchs.jpg"
+            $backgroundImage="/assets/gallery/brunchs.jpg"
           />
         </Grid>
         <Grid size={6} sx={{ backgroundColor: "white" }}>
