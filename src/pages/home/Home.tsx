@@ -15,6 +15,8 @@ const Home: FC = () => {
   const isMobile = !useMediaQuery(theme.breakpoints.up("sm"));
   const navigate = useNavigate();
 
+  console.log(import.meta.env.VITE_BACKEND_BASE_URL);
+
   return (
     <>
       <WallContainer

@@ -8,11 +8,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     base: "/candylau/",
-    define: {
-      "process.env.VITE_BACKEND_BASE_URL": JSON.stringify(
-        env.VITE_BACKEND_BASE_URL
-      ),
-    },
     build: {
       outDir: "dist",
     },
