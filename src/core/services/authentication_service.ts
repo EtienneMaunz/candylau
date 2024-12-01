@@ -3,14 +3,14 @@ import AxiosClient from "./axios_client";
 
 export const login = async (loginFormValues: LoginSchema) =>
   await AxiosClient.getInstance().post<LoginSchema, { authToken: string }>(
-    "api/auth/login",
+    "auth/login",
     loginFormValues
   );
 
 export const logout = async () =>
-  await AxiosClient.getInstance().post("api/auth/logout");
+  await AxiosClient.getInstance().post("auth/logout");
 
 export const checkAuth = async () =>
   await AxiosClient.getInstance().get<{ isAuthenticated: boolean }>(
-    "api/auth/check"
+    "auth/check"
   );
