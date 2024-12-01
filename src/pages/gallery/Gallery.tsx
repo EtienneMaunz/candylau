@@ -140,7 +140,8 @@ const Gallery: FC = () => {
 
         fetchPicturesMutation.mutate();
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log(err);
         setOpen({
           open: true,
           type: "error",
@@ -151,8 +152,9 @@ const Gallery: FC = () => {
 
   return fetchPicturesMutation.isPending || fetchPicturesMutation.isIdle ? (
     <GallerySkeleton>
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((_index) => (
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((index) => (
         <Skeleton
+          key={`img-skeleton-${index}`}
           variant="rectangular"
           width={isMobile ? `calc((100% / 2) - 2px)` : `calc((100% / 4) - 3px)`}
           height={isMobile ? 150 : 248}

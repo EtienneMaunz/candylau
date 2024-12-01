@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import {
   MainContainer,
   OpeningHours,
@@ -72,7 +72,7 @@ export const InformationAndAccess: FC = () => (
       </Typography>
       <OpeningHours container>
         {openingHours.map((openingHour) => (
-          <>
+          <Fragment key={`openingHour-${openingHour.day}`}>
             <Grid key={openingHour.day} size={6}>
               <Typography
                 variant="body1"
@@ -86,7 +86,7 @@ export const InformationAndAccess: FC = () => (
                 {openingHour.openingHours}
               </Typography>
             </Grid>
-          </>
+          </Fragment>
         ))}
       </OpeningHours>
       <SectionTitle>

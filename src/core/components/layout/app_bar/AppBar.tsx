@@ -109,10 +109,6 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
   const { open, message, setOpen, type } = useContext(SnackBarContext);
   const { isAuthenticated, checkAuthStatus } = useContext(AuthContext);
 
-  useEffect(() => {
-    console.log(isAuthenticated);
-  }, [isAuthenticated]);
-
   const onMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
