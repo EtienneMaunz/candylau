@@ -25,7 +25,7 @@ const MobileInformation: FC = () => {
         </Grid>
         <Grid size={12}>
           <FixedHeightImageContainer
-            $backgroundImage="/assets/gallery/gateaux_kinder.jpg"
+            $backgroundImage="/candylau/assets/gallery/gateaux_kinder.jpg"
             sx={{ height: "300px" }}
           />
         </Grid>
@@ -46,7 +46,7 @@ const MobileInformation: FC = () => {
         </Grid>
         <Grid size={12}>
           <FixedHeightImageContainer
-            $backgroundImage="/assets/gallery/tarte_framboises.jpg"
+            $backgroundImage="/candylau/assets/gallery/tarte_framboises.jpg"
             sx={{ height: "300px" }}
           />
         </Grid>
@@ -69,7 +69,7 @@ const MobileInformation: FC = () => {
             <Button
               variant="contained"
               onClick={() => {
-                navigate("/menu");
+                navigate("/candylau/menu");
                 scrollToTop();
               }}
             >
@@ -80,7 +80,7 @@ const MobileInformation: FC = () => {
         <Grid size={12}>
           <FixedHeightImageContainer
             sx={{ height: "300px" }}
-            $backgroundImage="/assets/gallery/patisseries.jpg"
+            $backgroundImage="/candylau/assets/gallery/patisseries.jpg"
           />
         </Grid>
       </Grid>
@@ -101,7 +101,7 @@ const MobileInformation: FC = () => {
             <Button
               variant="contained"
               onClick={() => {
-                navigate("/brunchs");
+                navigate("/candylau/brunchs");
                 scrollToTop();
               }}
             >
@@ -112,7 +112,7 @@ const MobileInformation: FC = () => {
         <Grid size={12}>
           <FixedHeightImageContainer
             sx={{ height: "300px" }}
-            $backgroundImage="/assets/gallery/brunchs.jpg"
+            $backgroundImage="/candylau/assets/gallery/brunchs.jpg"
           />
         </Grid>
       </Grid>

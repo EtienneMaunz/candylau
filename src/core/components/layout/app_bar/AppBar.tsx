@@ -61,27 +61,27 @@ const drawerWidth = 240;
 const pages: PageProps[] = [
   {
     title: "Accueil",
-    path: "/",
+    path: "/candylau",
     element: <Home />,
   },
   {
     title: "Menu",
-    path: "/menu",
+    path: "/candylau/menu",
     element: <MenuComponent />,
   },
   {
     title: "Information et accès",
-    path: "/information_and_access",
+    path: "/candylau/information_and_access",
     element: <InformationAndAccess />,
   },
   {
     title: "Galerie",
-    path: "/gallery",
+    path: "/candylau/gallery",
     element: <Gallery />,
   },
   {
     title: "Brunchs",
-    path: "/brunchs",
+    path: "/candylau/brunchs",
     element: <Brunchs />,
   },
 ];
@@ -92,7 +92,7 @@ const router = createBrowserRouter(
       {pages.map((page) => (
         <Route key={page.title} path={page.path} element={page.element} />
       ))}
-      <Route path="/login" element={<Login />} />
+      <Route path="/candylau/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </>
   )
@@ -138,7 +138,7 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
       <Divider />
       <List>
         <ListItem>
-          <Logo src="/assets/candylau.svg" width="100%" />
+          <Logo src="/candylau/assets/candylau.svg" width="100%" />
         </ListItem>
         <Divider sx={{ marginBottom: "1rem" }} />
         {pages.map((page) => (
@@ -198,7 +198,7 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
             >
               <MenuIcon />
             </IconButton>
-            <Logo src="/assets/candylau.svg" height="100%" />
+            <Logo src="/candylau/assets/candylau.svg" height="100%" />
           </Box>
           <Box
             sx={{
@@ -270,7 +270,7 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
                 ) : (
                   <MenuItem
                     onClick={() => {
-                      router.navigate("/login");
+                      router.navigate("/candylau/login");
                       handleClose();
                     }}
                   >
