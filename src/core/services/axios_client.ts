@@ -12,10 +12,11 @@ class AxiosClient {
 
     this.instance = axios.create({
       baseURL: import.meta.env.VITE_BACKEND_BASE_URL,
-      timeout: 10000,
+      timeout: 5000,
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     });
 
     return this.instance;
