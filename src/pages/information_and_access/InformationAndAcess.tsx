@@ -47,7 +47,7 @@ const openingHours: DayOpeningHours[] = [
 ];
 
 const markerIcon = icon({
-  iconUrl: "/candylau/assets/location-pin.png",
+  iconUrl: "/assets/location-pin.png",
   iconSize: [48, 48],
   iconAnchor: [24, 40],
 });
