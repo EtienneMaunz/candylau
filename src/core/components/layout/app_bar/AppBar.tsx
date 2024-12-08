@@ -158,10 +158,20 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
           gap: "1em",
         }}
       >
-        <IconButton color="primary" aria-label="instagram">
+        <IconButton
+          color="primary"
+          aria-label="instagram"
+          href="https://www.instagram.com/candylau.craponne?igsh=MTNneDFuM3pldjkxaw=="
+          target="_blank"
+        >
           <InstagramIcon />
         </IconButton>
-        <IconButton color="primary" aria-label="facebook">
+        <IconButton
+          color="primary"
+          aria-label="facebook"
+          href="https://www.facebook.com/share/15X1L1VddJ/?mibextid=LQQJ4d"
+          target="_blank"
+        >
           <FacebookIcon />
         </IconButton>
       </Box>
@@ -228,10 +238,20 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
           >
             {!isMobile && (
               <>
-                <IconButton color="primary" aria-label="instagram">
+                <IconButton
+                  color="primary"
+                  aria-label="instagram"
+                  href="https://www.instagram.com/candylau.craponne?igsh=MTNneDFuM3pldjkxaw=="
+                  target="_blank"
+                >
                   <InstagramIcon />
                 </IconButton>
-                <IconButton color="primary" aria-label="facebook">
+                <IconButton
+                  color="primary"
+                  aria-label="facebook"
+                  href="https://www.facebook.com/share/15X1L1VddJ/?mibextid=LQQJ4d"
+                  target="_blank"
+                >
                   <FacebookIcon />
                 </IconButton>
               </>

@@ -22,7 +22,7 @@ const sections: MenuSection[] = [
       {
         name: "Sandwich",
         description: "Sandwich classique + Verrine ou flan* + Boisson",
-        price: 11.1,
+        price: 10.1,
       },
       {
         name: "Wrap / Panini",

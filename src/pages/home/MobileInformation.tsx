@@ -39,7 +39,7 @@ const MobileInformation: FC = () => {
           >
             <Typography variant="h3">Laurine</Typography>
             <Typography variant="body1">
-              Forte de son expérience de conseillère accueil, Launrine sera là
+              Forte de son expérience de conseillère accueil, Laurine sera là
               pour vous chouchouter à tout moment de la journée.
             </Typography>
           </StyledBoxInformation>

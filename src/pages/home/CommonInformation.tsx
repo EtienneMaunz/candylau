@@ -45,7 +45,7 @@ const CommonInformation: FC = () => {
           >
             <Typography variant="h3">Laurine</Typography>
             <Typography variant="body1">
-              Forte de son expérience de conseillère accueil, Launrine sera là
+              Forte de son expérience de conseillère accueil, Laurine sera là
               pour vous chouchouter à tout moment de la journée.
             </Typography>
           </StyledBoxInformation>
@@ -102,7 +102,7 @@ const CommonInformation: FC = () => {
               Adepte de moments de partage et de convivialité avec notre famille
               et nos amis, nous souhaitons vous proposer des box brunch que vous
               pourrez déguster seul, en famille, en couple ou entre amis. Il y
-              en aura pour tous les goux !
+              en aura pour tous les goûts !
             </Typography>
             <Button
               variant="contained"
