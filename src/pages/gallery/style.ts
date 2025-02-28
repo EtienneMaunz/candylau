@@ -18,6 +18,7 @@ export const StyledFilesForm = styled.div`
 `;
 
 export const GallerySkeleton = styled.div`
+  width: 100%;
   display: flex;
   padding: 4px;
   gap: 4px;
