@@ -8,7 +8,6 @@ import {
 import {
   Avatar,
   Box,
-  Grid2,
   List,
   ListItem,
   ListItemAvatar,
@@ -19,7 +18,6 @@ import {
 import { SectionTitle } from "../menu/style";
 import CookieIcon from "@mui/icons-material/Cookie";
 import LocalPizzaIcon from "@mui/icons-material/LocalPizza";
-import LunchDiningIcon from "@mui/icons-material/LunchDining";
 
 interface Items {
   name: string;

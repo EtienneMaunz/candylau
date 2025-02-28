@@ -1,5 +1,5 @@
 import { createTheme, ThemeOptions } from "@mui/material/styles";
-import "@fontsource/dancing-script";
+import "@fontsource/dancing-script/400.css";
 
 const lightTheme: ThemeOptions = {
   palette: {
