@@ -13,8 +13,14 @@ export const Logo = styled.img<{ $width?: string; $height?: string }>`
     css`
       height: ${props.height};
     `}
+
+  cursor: pointer;
 `;
 
 export const PageContent = styled.div`
   min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 `;

@@ -25,7 +25,6 @@ import { PageProps } from "./types";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Menu as MenuComponent } from "../../../../pages/menu/Menu";
-import { InformationAndAccess } from "../../../../pages/information_and_access/InformationAndAcess";
 import { Brunchs } from "../../../../pages/brunchs/Brunchs";
 import {
   AccountCircle,
@@ -46,6 +45,9 @@ import Login from "../../../../pages/login/Login";
 import { SnackBarContext } from "../../../contexts/SnackBarContext";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { logout } from "../../../services/authentication_service";
+import Footer from "../footer/Footer";
+import { scrollToTop } from "../../../helpers/layout";
+import Caterer from "../../../../pages/caterer/Caterer";
 
 interface Props {
   /**
@@ -70,19 +72,19 @@ const pages: PageProps[] = [
     element: <MenuComponent />,
   },
   {
-    title: "Information et accès",
-    path: "/information_and_access",
-    element: <InformationAndAccess />,
+    title: "Brunchs",
+    path: "/brunchs",
+    element: <Brunchs />,
+  },
+  {
+    title: "Traiteur",
+    path: "/caterer",
+    element: <Caterer />,
   },
   {
     title: "Galerie",
     path: "/gallery",
     element: <Gallery />,
-  },
-  {
-    title: "Brunchs",
-    path: "/brunchs",
-    element: <Brunchs />,
   },
 ];
 
@@ -134,14 +136,24 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
       <Divider />
       <List>
         <ListItem>
-          <Logo src="/assets/candylau.svg" width="100%" />
+          <Logo
+            src="/assets/candylau.svg"
+            width="100%"
+            onClick={() => {
+              router.navigate("/");
+              scrollToTop();
+            }}
+          />
         </ListItem>
         <Divider sx={{ marginBottom: "1rem" }} />
         {pages.map((page) => (
           <ListItem key={page.title} disablePadding>
             <ListItemButton
               sx={{ textAlign: "center" }}
-              onClick={() => router.navigate(page.path)}
+              onClick={() => {
+                router.navigate(page.path);
+                scrollToTop();
+              }}
             >
               <ListItemText primary={page.title} />
             </ListItemButton>
@@ -204,7 +216,14 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
             >
               <MenuIcon />
             </IconButton>
-            <Logo src="/assets/candylau.svg" height="100%" />
+            <Logo
+              src="/assets/candylau.svg"
+              height="100%"
+              onClick={() => {
+                router.navigate("/");
+                scrollToTop();
+              }}
+            />
           </Box>
           <Box
             sx={{
@@ -220,7 +239,10 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
               <Button
                 key={page.title}
                 color="primary"
-                onClick={() => router.navigate(page.path)}
+                onClick={() => {
+                  router.navigate(page.path);
+                  scrollToTop();
+                }}
               >
                 {page.title}
               </Button>
@@ -332,6 +354,7 @@ const DrawerAppBar: FC<Props> = (props: Props) => {
         />
         <PageContent>
           <RouterProvider router={router} />
+          <Footer />
         </PageContent>
       </Box>
       <Snackbar

@@ -5,10 +5,35 @@ import {
   TypographiesContainer,
   WallContainer,
 } from "./style";
-import { Button, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import CommonInformation from "./CommonInformation";
 import MobileInformation from "./MobileInformation";
 import { useNavigate } from "react-router-dom";
+import { scrollToTop } from "../../core/helpers/layout";
+
+export const HOME_INFO = {
+  intro: {
+    title: "À propos",
+    description:
+      "Candy'Lau, c’est avant tout une histoire d’amitié ! Au début sur un terrain de basket et maintenant, autour d’une passion commune: ravir vos papilles. Passionnées par la pâtisserie et le bien manger en général, nous avons imaginé Candy'Lau comme un lieu convivial et chaleureux où règne le fait maison.",
+  },
+  cocoon: {
+    title: "Notre cocon",
+    description:
+      "Nous vous accueillons à toutes heures de la journée avec des délices sucrés et salés. Des entremets pour votre repas dominical, un petit déjeuner ou repas du midi fait maison, vous trouverez forcément votre bonheur.",
+  },
+  brunchs: {
+    title: "Nos brunchs",
+    description:
+      "Chaque dimanche, uniquement à emporter, nous vous proposons des brunchs variés préparés avec des produits de saison, contentant du salé et du sucré: à déguster seul, à deux ou en famille !",
+  },
+};
 
 const Home: FC = () => {
   const theme = useTheme();
@@ -19,7 +44,7 @@ const Home: FC = () => {
     <>
       <WallContainer
         sx={{ height: { xs: "300px", sm: "600px" } }}
-        $backgroundImage="/assets/fruits.jpg"
+        $backgroundImage="/assets/gallery/candylau_background.svg"
       >
         <TypographiesContainer>
           <Typography color="white" variant="h3" gutterBottom>
@@ -28,13 +53,41 @@ const Home: FC = () => {
           <Typography color="white" variant="h4" sx={{ textAlign: "center" }}>
             Délices sucrés et salés
           </Typography>
-          <Button
-            sx={{ marginTop: "2rem" }}
-            variant="contained"
-            onClick={() => navigate("/brunchs")}
+          <Box
+            sx={{
+              marginTop: "2rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "1rem",
+            }}
           >
-            Commander
-          </Button>
+            <Button
+              variant="contained"
+              onClick={() => {
+                navigate("/brunchs");
+                scrollToTop();
+              }}
+            >
+              Commander
+            </Button>
+            <Typography
+              color="white"
+              variant="button"
+              sx={{ textAlign: "center" }}
+            >
+              ou
+            </Typography>
+            <Button
+              variant="contained"
+              onClick={() => {
+                navigate("/menu");
+                scrollToTop();
+              }}
+            >
+              Voir la carte
+            </Button>
+          </Box>
         </TypographiesContainer>
       </WallContainer>
       <InformationContainer>
@@ -44,27 +97,6 @@ const Home: FC = () => {
             marginBottom: { xs: "1rem", sm: "2rem" },
           }}
         >
-          <Typography
-            variant="h3"
-            sx={{
-              marginBottom: { xs: "1rem", sm: "2rem" },
-            }}
-          >
-            À propos de nous
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              textAlign: "center",
-            }}
-          >
-            Initialement, Candy'Lau c'est deux basketteuses de 29 ans avec une
-            âme de compétitrice. Après 10 années en tant que coéquipières sur
-            les terrains, il était temps pour nous de faire équipe pour le
-            projet de notre vie... Et suite à 2 ans de recherche active et de
-            travail dans l'ombre, c'est comme ça que notre rêve devient enfin
-            une réalité: Candy'Lau !
-          </Typography>
           {isMobile ? <MobileInformation /> : <CommonInformation />}
         </Information>
       </InformationContainer>

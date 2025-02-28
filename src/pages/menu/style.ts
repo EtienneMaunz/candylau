@@ -27,6 +27,7 @@ export const SectionTitle = styled.div`
   justify-content: center;
   margin-top: 2rem;
   border-radius: 4px;
+  text-align: left;
 `;
 
 export const MenuItem = styled(Box)`

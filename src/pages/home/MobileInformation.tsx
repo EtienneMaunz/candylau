@@ -1,8 +1,22 @@
-import { Button, Grid2 as Grid, Typography } from "@mui/material";
+import {
+  Button,
+  Grid2 as Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import { FC } from "react";
 import { FixedHeightImageContainer, StyledBoxInformation } from "./style";
 import { useNavigate } from "react-router-dom";
 import { scrollToTop } from "../../core/helpers/layout";
+import { HOME_INFO } from "./Home";
+import BakeryDiningIcon from "@mui/icons-material/BakeryDining";
+import BrunchDiningIcon from "@mui/icons-material/BrunchDining";
+import LocalPizzaIcon from "@mui/icons-material/LocalPizza";
+import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
+import CakeIcon from "@mui/icons-material/Cake";
 
 const MobileInformation: FC = () => {
   const navigate = useNavigate();
@@ -16,16 +30,15 @@ const MobileInformation: FC = () => {
               padding: "2rem",
             }}
           >
-            <Typography variant="h3">Candice</Typography>
+            <Typography variant="h3">{HOME_INFO.intro.title}</Typography>
             <Typography variant="body1">
-              Patissière depuis maintenant 10 ans et passionnée par son métier,
-              elle est prête à vous conconcter des petites merveilles.
+              {HOME_INFO.intro.description}
             </Typography>
           </StyledBoxInformation>
         </Grid>
         <Grid size={12}>
           <FixedHeightImageContainer
-            $backgroundImage="/assets/gallery/gateaux_kinder.jpg"
+            $backgroundImage="/assets/gallery/laurine_et_candice.svg"
             sx={{ height: "300px" }}
           />
         </Grid>
@@ -37,50 +50,48 @@ const MobileInformation: FC = () => {
               padding: "1rem",
             }}
           >
-            <Typography variant="h3">Laurine</Typography>
+            <Typography variant="h3">{HOME_INFO.cocoon.title}</Typography>
             <Typography variant="body1">
-              Forte de son expérience de conseillère accueil, Laurine sera là
-              pour vous chouchouter à tout moment de la journée.
+              {HOME_INFO.cocoon.description}
             </Typography>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <BakeryDiningIcon color="primary" fontSize="large" />
+                </ListItemIcon>
+                <ListItemText primary="Viennoiseries" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CakeIcon color="primary" fontSize="large" />
+                </ListItemIcon>
+                <ListItemText primary="Pâtisseries" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <DinnerDiningIcon color="primary" fontSize="large" />
+                </ListItemIcon>
+                <ListItemText primary="Plats du jour" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <LocalPizzaIcon color="primary" fontSize="large" />
+                </ListItemIcon>
+                <ListItemText primary="Snacks" />
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <BrunchDiningIcon color="primary" fontSize="large" />
+                </ListItemIcon>
+                <ListItemText primary="Brunchs" />
+              </ListItem>
+            </List>
           </StyledBoxInformation>
         </Grid>
         <Grid size={12}>
           <FixedHeightImageContainer
-            $backgroundImage="/assets/gallery/tarte_framboises.jpg"
-            sx={{ height: "300px" }}
-          />
-        </Grid>
-      </Grid>
-      <Grid container spacing={0} sx={{ width: "100%" }}>
-        <Grid size={12} sx={{ backgroundColor: "white" }}>
-          <StyledBoxInformation
-            sx={{
-              padding: "1rem",
-            }}
-          >
-            <Typography variant="h3">Le concept</Typography>
-            <Typography variant="body1">
-              Toutes les deux passionnées par l'univers de la cuisine, nous
-              allons nous préparer une multitude de délices salés et sucrés,
-              tous fait maison évidemment. Vous pourrez venir vous restaurer
-              pour le petit déjeuner, entre midi et deux ou bien tout simplement
-              pour une petite pause gourmande tout au long de la journée.
-            </Typography>
-            <Button
-              variant="contained"
-              onClick={() => {
-                navigate("/menu");
-                scrollToTop();
-              }}
-            >
-              <Typography variant="button">Voir le menu</Typography>{" "}
-            </Button>
-          </StyledBoxInformation>
-        </Grid>
-        <Grid size={12}>
-          <FixedHeightImageContainer
-            sx={{ height: "300px" }}
             $backgroundImage="/assets/gallery/patisseries.jpg"
+            sx={{ height: "300px" }}
           />
         </Grid>
       </Grid>
@@ -91,12 +102,9 @@ const MobileInformation: FC = () => {
               padding: "1rem",
             }}
           >
-            <Typography variant="h3">Les brunchs</Typography>
+            <Typography variant="h3">{HOME_INFO.brunchs.title}</Typography>
             <Typography variant="body1">
-              Adepte de moments de partage et de convivialité avec notre famille
-              et nos amis, nous souhaitons vous proposer des box brunch que vous
-              pourrez déguster seul, en famille, en couple ou entre amis. Il y
-              en aura pour tous les goux !
+              {HOME_INFO.brunchs.description}
             </Typography>
             <Button
               variant="contained"
@@ -105,14 +113,14 @@ const MobileInformation: FC = () => {
                 scrollToTop();
               }}
             >
-              <Typography variant="button">Commander</Typography>{" "}
+              <Typography variant="button">Commander</Typography>
             </Button>
           </StyledBoxInformation>
         </Grid>
         <Grid size={12}>
           <FixedHeightImageContainer
             sx={{ height: "300px" }}
-            $backgroundImage="/assets/gallery/brunchs.jpg"
+            $backgroundImage="/assets/gallery/box.svg"
           />
         </Grid>
       </Grid>

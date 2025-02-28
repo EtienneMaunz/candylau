@@ -1,5 +1,5 @@
 import { createTheme, ThemeOptions } from "@mui/material/styles";
-import "@fontsource/satisfy";
+import "@fontsource/dancing-script";
 
 const lightTheme: ThemeOptions = {
   palette: {
@@ -13,22 +13,22 @@ const lightTheme: ThemeOptions = {
   },
   typography: {
     h1: {
-      fontFamily: "Satisfy",
+      fontFamily: "Dancing Script",
     },
     h2: {
-      fontFamily: "Satisfy",
+      fontFamily: "Dancing Script",
     },
     h3: {
-      fontFamily: "Satisfy",
+      fontFamily: "Dancing Script",
     },
     h4: {
-      fontFamily: "Satisfy",
+      fontFamily: "Dancing Script",
     },
     h5: {
-      fontFamily: "Satisfy",
+      fontFamily: "Dancing Script",
     },
     h6: {
-      fontFamily: "Satisfy",
+      fontFamily: "Dancing Script",
     },
     body1: {
       fontFamily: "Roboto",
@@ -37,10 +37,10 @@ const lightTheme: ThemeOptions = {
       fontFamily: "Roboto",
     },
     subtitle1: {
-      fontFamily: "Satisfy",
+      fontFamily: "Dancing Script",
     },
     subtitle2: {
-      fontFamily: "Satisfy",
+      fontFamily: "Dancing Script",
     },
   },
 };
