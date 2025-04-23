@@ -46,7 +46,7 @@ const CommonInformation: FC = () => {
       <Grid container spacing={0} sx={{ width: "100%" }}>
         <Grid size={6}>
           <FixedHeightImageContainer
-            $backgroundImage="/assets/gallery/patisseries.jpg"
+            $backgroundImage="/assets/gallery/cocon.jpg"
             sx={{ height: "100%" }}
           />
         </Grid>
@@ -120,7 +120,7 @@ const CommonInformation: FC = () => {
         <Grid size={6}>
           <FixedHeightImageContainer
             sx={{ height: "400px" }}
-            $backgroundImage="/assets/gallery/box.svg"
+            $backgroundImage="/assets/gallery/brunch_1.jpg"
           />
         </Grid>
       </Grid>

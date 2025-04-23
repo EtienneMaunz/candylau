@@ -90,7 +90,7 @@ const MobileInformation: FC = () => {
         </Grid>
         <Grid size={12}>
           <FixedHeightImageContainer
-            $backgroundImage="/assets/gallery/patisseries.jpg"
+            $backgroundImage="/assets/gallery/cocon.jpg"
             sx={{ height: "300px" }}
           />
         </Grid>
@@ -120,7 +120,7 @@ const MobileInformation: FC = () => {
         <Grid size={12}>
           <FixedHeightImageContainer
             sx={{ height: "300px" }}
-            $backgroundImage="/assets/gallery/box.svg"
+            $backgroundImage="/assets/gallery/brunch_1.jpg"
           />
         </Grid>
       </Grid>

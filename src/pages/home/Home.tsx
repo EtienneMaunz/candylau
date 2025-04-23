@@ -26,7 +26,7 @@ export const HOME_INFO = {
   cocoon: {
     title: "Notre cocon",
     description:
-      "Nous vous accueillons à toutes heures de la journée avec des délices sucrés et salés. Des entremets pour votre repas dominical, un petit déjeuner ou repas du midi fait maison, vous trouverez forcément votre bonheur.",
+      "Nous vous accueillons à toute heure de la journée avec des délices sucrés et salés. Des entremets pour votre repas dominical, un petit déjeuner ou repas du midi fait maison, vous trouverez forcément votre bonheur.",
   },
   brunchs: {
     title: "Nos brunchs",

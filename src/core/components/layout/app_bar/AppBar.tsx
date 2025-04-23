@@ -20,7 +20,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from "../../../../pages/home/Home";
-import Gallery from "../../../../pages/gallery/Gallery";
 import { PageProps } from "./types";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -80,11 +79,6 @@ const pages: PageProps[] = [
     title: "Traiteur",
     path: "/caterer",
     element: <Caterer />,
-  },
-  {
-    title: "Galerie",
-    path: "/gallery",
-    element: <Gallery />,
   },
 ];
 
